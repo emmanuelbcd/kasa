@@ -8,7 +8,7 @@ function  Header() {
     return (
         //on crée un élément header avec une classe header
         <header className="header">
-            <img src={ Logo } alt="Logo Kasa" className="header-logo" />
+            <img src={ Logo } alt="Kasa - location d'appartements entre particuliers depuis 10 ans." className="header-logo" />
             <Navbar />
         </header>
     );
