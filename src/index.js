@@ -8,6 +8,7 @@ import App from './App';
 
 //on crée un root react
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 //on "render" (ou on affiche) le composant App à l'intérieur de l'élément racine (root)
 root.render(
   <React.StrictMode>
