@@ -1,15 +1,15 @@
 import React from 'react';
 import apartmentsData from '../../data/apartments.json';
-import { Link } from 'react-router-dom'; //on importe le composant link
+import Card from '../Card/Card.jsx';
 
 function Gallery() {
     return(
         <main className="gallery">
             {apartmentsData.map(apartment => (
-                <Link key={ apartment.id } to={`/fiche-logement/${apartment.id}`} className="apartment-item">
-                    <img src={apartment.cover} alt={`${apartment.title}`} />
-                    <h3>{apartment.title}</h3>
-                </Link>
+                <Card   key={ apartment.id } 
+                        id={apartment.id} 
+                        cover={apartment.cover} 
+                        title={apartment.title} />
             ))}
         </main>
     );
