@@ -1,0 +1,13 @@
+.navbar {
+    ul {
+        list-style-type: none; //on supprime les puces
+        margin: 0; //on supprime la marge
+        padding: 0; //on supprime le padding
+        display: flex; //on affiche les éléments horizontalement
+        gap: 20px; //on ajoute un espacement entre les liens
+    }
+
+    a {
+        text-decoration: none; //on supprime le soulignement des liens
+    }
+}
