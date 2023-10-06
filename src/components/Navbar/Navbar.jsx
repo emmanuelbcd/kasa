@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'; //on importe le composant Link depuis r
 //on définit le composant Navbar
 function Navbar() {
     return (
-        <nav>
+        <nav className="navbar">
             <ul>
                 <li><Link to="/">Accueil</Link></li>
                 <li><Link to="/a-propos">A propos</Link></li>
