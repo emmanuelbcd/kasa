@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Apartment from './pages/Apartment';
 import NotFound from './pages/NotFound';
+import './styles/main.scss';
 
 
 function App(){
