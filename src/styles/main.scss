@@ -1,2 +1,17 @@
-//Base styles
-@use "./base/normalize";
+//la compilation SASS est gérée automatiquement grâce à react-scripts
+
+//Base
+@use "base/_normalize";
+@use "base/_box-sizing";
+
+
+//Components
+@use "../components/Header/Header";
+@use "../components/Navbar/Navbar";
+@use "../components/Banner/Banner";
+
+//Conteneur global
+@use "../App";
+
+//Conteneur de contenu
+@use "../pages/Home/home";
