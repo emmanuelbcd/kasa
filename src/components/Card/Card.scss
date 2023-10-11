@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    width: 340px;
+    height: 340px;
+
+    img {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        object-fit: cover;
+        position: relative;
+    }
+
+    h3 {
+        position: absolute;
+        //top: 268px;
+        //left: 20px;
+    }
+}
