@@ -4,14 +4,23 @@
 @use "base/_normalize";
 @use "base/_box-sizing";
 
+//Abstracts
+@use "abstracts/_variables";
+
 
 //Components
 @use "../components/Header/Header";
 @use "../components/Navbar/Navbar";
 @use "../components/Banner/Banner";
+@use "../components/Gallery/Gallery";
+@use "../components/Card/Card";
+@use "../components/Footer/Footer";
 
 //Conteneur global
 @use "../App";
 
 //Conteneur de contenu
 @use "../pages/Home/home";
+
+
+
