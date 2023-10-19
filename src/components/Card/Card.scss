@@ -1,19 +1,35 @@
+@use "../../styles/abstracts/variables" as variables;
+
 .card {
     display: flex;
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: 255px;
+    position: relative;
+    //width: 30%;
+    //height: 340px;
+    //margin: 10px;
 
     img {
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
+        //display: flex;
+        display: block;
+        //justify-content: center;
+        width: 100%; //occupe toute la largeur du parent
+        left: 100%; //occupe toute la hauteur du parent
+        //overflow: hidden;
         object-fit: cover;
-        position: relative;
+        //position: relative;
+        border-radius: 10px;
     }
 
     h3 {
         position: absolute;
-        //top: 268px;
-        //left: 20px;
+        bottom: 14px;
+        left: 14px;
+        margin: 0; //on supprime les marges par défaut
+        max-width: calc(100% - 28px); //on soustrait 28px : 14px à gauche et 14 px à droite
+        white-space: normal; //on permet au texte de passer à la ligne si nécessaire
+        overflow: hidden; //on cache tout ce qui dépasse
+        color: variables.$color-secondary;
+        font-size: 18px;
     }
 }
