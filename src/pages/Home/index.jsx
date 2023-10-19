@@ -9,7 +9,7 @@ function Home() {
     return (
         <div className="home">
             <Header />
-            <Banner image={homeBanner} slogan="Chez vous, partout et ailleurs." />
+            <Banner image={homeBanner} slogan={<><span>Chez vous,</span><br className="mobile-break"/><span> partout et ailleurs</span></>} />
             <Gallery />
             <Footer />
         </div>
