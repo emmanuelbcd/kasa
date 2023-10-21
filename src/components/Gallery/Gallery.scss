@@ -2,9 +2,15 @@
 
 .gallery {
     display: flex;
-    flex-direction: row;
+    //flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: variables.$color-tertiary;
+    margin-top: 14px;
+    gap: 14px;
+    //background-color: variables.$color-tertiary;
+    //border-radius: 20px;
+    //padding: 50px;
+    //gap: 50px;
 }
