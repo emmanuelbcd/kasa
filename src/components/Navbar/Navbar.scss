@@ -1,13 +1,23 @@
+@use "../../styles/abstracts/variables" as variables;
+
 .navbar {
     ul {
         list-style-type: none; //on supprime les puces
         margin: 0; //on supprime la marge
         padding: 0; //on supprime le padding
         display: flex; //on affiche les éléments horizontalement
-        gap: 40px; //on ajoute un espacement entre les liens
+        gap: 10px; //on ajoute un espacement entre les liens
     }
 
     a {
+        font-size: 12px;
         text-decoration: none; //on supprime le soulignement des liens
+        color: variables.$color-primary;
+        text-transform: uppercase; //on met les éléments en majuscule
+    }
+
+    .active-link {
+        text-decoration: underline;
+        color: variables.$color-primary;
     }
 }
