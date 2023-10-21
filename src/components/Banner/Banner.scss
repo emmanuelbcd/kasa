@@ -8,6 +8,10 @@
     width: 100%;
     height: 111px;
 
+    &.without-slogan {
+        height: 223px;
+    }
+
     //on crée un overlay (superposition) avec une opcaité de 30%
     &::before{ //on utilise le pseudo-élément pour créer une superposition semi-transparente sur l'image
         content:"";
