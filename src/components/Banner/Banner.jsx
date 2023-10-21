@@ -3,7 +3,7 @@
 
 function  Banner( { image, slogan } ) {
     return (
-        <section className="banner">
+        <section className={`banner ${slogan ? "with-slogan" : "without-slogan"}`}>
             <img src={ image } alt="bannière" />
             { slogan && <h2>{slogan}</h2>}
         </section>
