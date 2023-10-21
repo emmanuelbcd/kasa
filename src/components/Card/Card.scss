@@ -9,16 +9,26 @@
     //height: 340px;
     //margin: 10px;
 
-    img {
-        //display: flex;
-        display: block;
-        //justify-content: center;
-        width: 100%; //occupe toute la largeur du parent
-        left: 100%; //occupe toute la hauteur du parent
-        //overflow: hidden;
-        object-fit: cover;
-        //position: relative;
+    //Pseudo-élément pour le gradient
+    &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         border-radius: 10px;
+        z-index: 1; //on place le gradient au-dessus de l'image mais sous le texte
+    }
+
+    img {
+        display: block;
+        width: 100%; //occupe toute la largeur du parent
+        height: 100%; //occupe toute la hauteur du parent
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 0; //on place l'image en dessous du gradient
     }
 
     h3 {
@@ -31,5 +41,6 @@
         overflow: hidden; //on cache tout ce qui dépasse
         color: variables.$color-secondary;
         font-size: 18px;
+        z-index: 2;//on s'assure que le texte est au-dessus de l'image et du gradient
     }
 }
