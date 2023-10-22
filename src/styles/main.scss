@@ -15,6 +15,7 @@
 @use "../components/Banner/Banner";
 @use "../components/Gallery/Gallery";
 @use "../components/Card/Card";
+@use "../components/Collapse/Collapse";
 @use "../components/Footer/Footer";
 
 //Conteneur global
@@ -22,6 +23,7 @@
 
 //Conteneur de contenu
 @use "../pages/Home/home";
+@use "../pages/About/about";
 
 
 
