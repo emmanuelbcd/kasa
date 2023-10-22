@@ -1,0 +1,60 @@
+@use "../../styles/abstracts/variables" as variables;
+
+
+//mobile first
+.not-found-page {
+    width: 90%;
+    margin : 0 auto; //on centre horizontalement
+    display: flex;
+    flex-direction: column;
+
+    .error-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1; //on permet à la section d'erreur de prendre tout l'espace restant, après le Header
+        padding: 262px 0; //on éloigne le 404 du haut
+
+        .error-code {
+            font-size: 96px;
+            font-weight: 700;
+            margin: 0;
+            color: variables.$color-primary;
+            align-self: center;
+        }
+
+        .error-message {
+            width: 260px;
+            font-size: 18px;
+            font-weight: 500;
+            color: variables.$color-primary;
+            text-align: center;
+        }
+
+        .return-home {
+            font-size: 14px;
+            padding-top: 200px; //on éloigne le return home du haut
+            color: variables.$color-primary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    //style pour les tablettes
+    @media (min-width: 769px) {
+        width: 92%;
+    }
+
+    //style pour les PC 
+    @media (min-width: 1025px) {
+        width: 85%;
+        max-width: 1440px;
+    }
+}
+
+.mobile-break{
+    @media (min-width: 769px) {
+        display: none;
+    }
+}
