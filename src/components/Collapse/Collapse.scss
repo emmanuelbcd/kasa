@@ -1,0 +1,53 @@
+@use "../../styles/abstracts/variables" as variables;
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    position: relative; //on envisage de positionner la flèche arrow
+    border: none;
+    margin-top: 14px;
+
+    //Titres (Fiabilité, Respect, etc.)
+    .collapse-title {
+        display: flex;
+        height: 30px;
+        border-radius: 5px;
+        justify-content: space-between;
+        align-items: center;
+        color: variables.$color-secondary;
+        background-color: variables.$color-primary;
+        border: none;
+        padding: 14px;
+        
+        
+
+        //Flèche (arrow)
+        .arrow-icon {
+            width: 16px;
+            transition: transform 0.3s; //on crée une rotation
+
+            //Lorsque le collapse est ouvert, on fait pointer la flèche vers le haut
+            &.opened {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    //Contenu : quand le collapse est ouvert
+    .collapse-content {
+        background-color: variables.$color-tertiary;
+        color: variables.$color-primary;
+        padding: 14px;
+        display: none; // Par défaut, le contenu est caché
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        //Lorsque le collapse est ouvert, on affiche le contenu
+        &.opened {
+            display: block;
+            size: 13px;
+        }
+    }
+}
