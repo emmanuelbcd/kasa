@@ -1,4 +1,5 @@
 //import React from 'react';
+import { Link } from 'react-router-dom'; //
 import Header from '../../components/Header/Header.jsx';
 
 function NotFound() {
@@ -8,7 +9,8 @@ function NotFound() {
             <div className="error-section">
                 <h1 className="error-code">404</h1>
                 <p className="error-message">Oups! La page que vous demandez n'existe pas.</p>
-                <a href="/" className="return-home">Retourner sur la page d'accueil</a>
+                {/* Link remplace a href : on améliore l'expérience utilisateur en évitant le rechargement de la page */}
+                <Link to="/" className="return-home">Retourner sur la page d'accueil</Link>
             </div>
         </div>
     );
