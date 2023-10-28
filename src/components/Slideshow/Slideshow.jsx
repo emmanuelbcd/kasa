@@ -19,7 +19,7 @@ function Slideshow({ pictures }) {
     }
 
     return (
-        <div className="slideshow-container">
+        <section className="slideshow-container">
             <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide-image" />
             {/* Condition pour afficher le compteur si le nombre d'images est supérieur à 1 */}
             {pictures.length > 1 && (
@@ -37,7 +37,7 @@ function Slideshow({ pictures }) {
                 <img src={Slideright} alt="Suivant"/>
             </button>
             )}
-        </div>
+        </section>
     );
 }
 
