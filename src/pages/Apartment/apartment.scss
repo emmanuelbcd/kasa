@@ -1,6 +1,83 @@
+@use "../../styles/abstracts/variables" as variables;
+
 .apartment {
     width: 90%;
     margin : 0 auto; //on centre horizontalement
+
+    .content {
+        h1 {
+            font-size: 18px;
+            color: variables.$color-primary;
+        }
+
+        .content_location {
+            font-size: 14px;
+            color: variables.$color-primary;
+        }
+
+        .content_tags {
+            margin-bottom: 14px;
+
+            span {
+            display: inline-block;
+            min-width: 84px;
+            background-color: variables.$color-primary;
+            color: variables.$color-secondary;
+            padding: 5px 10px;
+            margin-right: 10px;
+            margin-top: 14px;
+            font-size: 10px;
+            text-align: center;
+            border-radius: 5px;
+
+                &:last-child {
+                    margin-right: 0; //on s'assure que le dernier tag n'a pas d'espace à droite
+                }
+            }
+
+        }
+
+        .rate_host_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content_rate {
+            display: flex;
+            align-items: center;
+            margin-right: auto; //on pousse content_host vers la droite
+
+            img { 
+                margin-right: 5px;
+                height: 13px;
+            }
+        }
+
+        .content_host {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+
+            .content_hostName {
+                font-size: 12px;
+                max-width: 50%;
+                margin-right: 10px;
+                color: variables.$color-primary;
+                text-align: right;
+            }
+
+            .content_hostPicture {
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 
     //style pour les tablettes
     @media (min-width: 769px) {
