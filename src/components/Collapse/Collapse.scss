@@ -20,6 +20,7 @@
         background-color: variables.$color-primary;
         border: none;
         padding: 14px;
+        font-size: 13px;
         
         
 
@@ -47,7 +48,9 @@
         //Lorsque le collapse est ouvert, on affiche le contenu
         &.opened {
             display: block;
-            size: 13px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17.11px;
         }
     }
 }
