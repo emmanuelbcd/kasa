@@ -5,9 +5,6 @@
     width: 100%;
     height: 255px;
     position: relative;
-    //width: 30%;
-    //height: 340px;
-    //margin: 10px;
 
     //Pseudo-élément pour le gradient
     &::before{
@@ -42,5 +39,11 @@
         color: variables.$color-secondary;
         font-size: 18px;
         z-index: 2;//on s'assure que le texte est au-dessus de l'image et du gradient
+    }
+
+    @media (min-width: 1025px) {
+        width: 30%;
+        height: 340px;
+        margin: 10px;
     }
 }
