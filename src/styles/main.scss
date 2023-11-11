@@ -23,8 +23,8 @@
 @use "../App";
 
 //Conteneur de contenu
-@use "../pages/Home/home";
-@use "../pages/About/about";
+@use "../pages/Home/home.scss";
+@use "../pages/About/about.scss";
 @use "../pages/NotFound/notFound.scss";
 @use "../pages/Apartment/apartment.scss";
 
