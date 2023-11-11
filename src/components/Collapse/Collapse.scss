@@ -21,6 +21,7 @@
         border: none;
         padding: 14px;
         font-size: 13px;
+        z-index: 2;
         
         
 
@@ -40,10 +41,12 @@
     .collapse-content {
         background-color: variables.$color-tertiary;
         color: variables.$color-primary;
-        padding: 14px;
+        padding: 19px 14px 14px 14px;
         display: none; // Par défaut, le contenu est caché
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
+        margin-top: -5px;
+        z-index: 1;
 
         //Lorsque le collapse est ouvert, on affiche le contenu
         &.opened {
