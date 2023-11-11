@@ -11,6 +11,7 @@
 
     a {
         font-size: 12px;
+        font-weight: 500;
         text-decoration: none; //on supprime le soulignement des liens
         color: variables.$color-primary;
         text-transform: uppercase; //on met les éléments en majuscule
@@ -20,4 +21,17 @@
         text-decoration: underline;
         color: variables.$color-primary;
     }
+
+    //style pour les PC 
+    @media (min-width: 1025px) {
+        ul { 
+            gap: 40px; 
+        }
+    
+        a {
+            font-size: 24px;
+            text-transform: none;
+        }
+    }
+
 }
