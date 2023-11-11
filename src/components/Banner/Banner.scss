@@ -47,5 +47,17 @@
         font-size: 24px;
         z-index: 2; //on s'assure que le texte est au-dessus de l'overlay et de l'image
         left: 14px;
+        text-align: left;
+    }
+
+    @media (min-width: 1025px) {
+        height: 223px;
+
+        h2 {
+            left: 0; //on réinitialise à 0 pour permettre de centrer
+            font-size: 48px;
+            text-align: center; //on centre le texte 
+            width: 100%;
+        }
     }
 }
