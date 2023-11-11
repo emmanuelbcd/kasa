@@ -20,6 +20,7 @@
     .slide-button {
         position: absolute;
         top: 50%; // on centre verticalement
+        transform: translateY(-50%); //on fait coïncider le centre des flèches avec le centre du conteneur
         background: none;
         border: none;
         cursor: pointer;
