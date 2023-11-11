@@ -11,5 +11,13 @@
     a {
         text-decoration: none;
     }
+
+    //style pour les PC 
+    @media (min-width: 1025px) {
+        .img {
+            //width: 210.32px;
+            height: 12px;
+        }
+    }
     
 }
