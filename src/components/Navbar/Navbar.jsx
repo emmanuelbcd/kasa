@@ -11,7 +11,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 //on définit le composant Navbar
 function Navbar() {
-    const location = useLocation(); //on souhaite obtenir l'emplacement
+    const location = useLocation(); //on souhaite obtenir l'emplacement, le chemin (ou route) actif
     return (
         <nav className="navbar">
             <ul>
