@@ -3,17 +3,32 @@
 .gallery {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 14px;
+    margin-right: auto;
+    margin-left: auto;
     gap: 14px;
+    width: 90%;
+    //margin: 0 auto; //on centre horizontalement
+
+    @media (min-width: 769px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: variables.$color-tertiary;
+        border-radius: 20px;
+        gap: 40px;
+        padding: 40px;
+        margin-top: 30px;
+    }
 
     @media (min-width: 1025px) {
         flex-direction: row;
+        flex-wrap: wrap;
         background-color: variables.$color-tertiary;
         border-radius: 20px;
+        gap: 50px;
         padding: 50px;
-        //gap: 50px;
+        margin-top: 30px;
     }
 }
