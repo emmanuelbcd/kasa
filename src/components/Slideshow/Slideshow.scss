@@ -4,10 +4,12 @@
     display: flex;
     align-items: center; //on centre verticalement
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     height: 255px; //hauteur pour mobile
     position: relative;
     overflow: hidden; //on s'assure que rien ne dépasse du conteneur
+    margin-right: auto;
+    margin-left: auto;
 
     .slide-image {
         display: block;
@@ -25,9 +27,11 @@
         border: none;
         cursor: pointer;
         z-index: 10; //on s'assure qu'il apparaît au-dessus de l'image
+        width: 24px;
 
         .img {
             opacity: 0.87;
+            //width: 24px;
         }
     }
 
@@ -47,5 +51,12 @@
     .next {
         right: 2px; //2px du bord droit
     }
+
+    @media (min-width: 1025px) {
+        .slide-button-img {
+           width: 48.66px;
+        }
+    }
+
 
 }
