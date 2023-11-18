@@ -3,11 +3,11 @@
 import { useState } from 'react';
 import Arrow from '../../assets/arrow.png'; //on importe l'image du logo
 
-function Collapse({ title, content }) {
+function Collapse({ title, content, customClass }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="collapse">
+        <div className={`collapse ${customClass}`}>
             <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
                 {title}
                 <img 
