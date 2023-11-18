@@ -2,21 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center; //on aligne verticalement les éléments logo et navbar
+    width: 90%;
+    margin: 0 auto; //on centre horizontalement
 
-    img{
+    .header-logo {
         width: 145px;
-        height: 47px;
     }
 
     a {
         text-decoration: none;
     }
 
+    //tablettes
+    @media (min-width: 769px) {
+        .header-logo {
+            width: 178px;
+        }
+    }
+
     //style pour les PC 
     @media (min-width: 1025px) {
-        .img {
-            //width: 210.32px;
-            height: 12px;
+        .header-logo {
+            width: 211px;
         }
     }
     
