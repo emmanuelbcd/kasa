@@ -22,6 +22,17 @@
         color: variables.$color-primary;
     }
 
+    //tablettes
+    @media (min-width: 769px) {
+        ul {
+            gap: 25px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+
     //style pour les PC 
     @media (min-width: 1025px) {
         ul { 
