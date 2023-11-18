@@ -41,9 +41,11 @@
         z-index: 2;//on s'assure que le texte est au-dessus de l'image et du gradient
     }
 
+    @media (min-width: 769px) {
+        width: calc((100% - 40px) / 2 );
+    }
+
     @media (min-width: 1025px) {
-        width: 30%;
-        height: 340px;
-        margin: 10px;
+        width: calc(33.33% - (2 * 50px / 3)); //on soustrait l'espacement total divisé par le nombre de cartes par ligne
     }
 }
