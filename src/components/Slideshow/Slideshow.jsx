@@ -34,7 +34,7 @@ function Slideshow({ pictures }) {
             {/*Condition pour afficher la flèche suivante si le nombre d'images est supérieur à 1*/}
             {pictures.length > 1 && (
             <button onClick={goNext} className="slide-button next">
-                <img src={Slideright} alt="Suivant"/>
+                <img src={Slideright} alt="Suivant" className="slide-button-img"/>
             </button>
             )}
         </section>
