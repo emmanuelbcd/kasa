@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto; //on centre horizontalement
     height: 111px;
 
     &.without-slogan {
@@ -41,7 +42,6 @@
     h2 {
         position: absolute;
         color: variables.$color-secondary;
-        //text-align: center;
         margin: 0;
         font-weight: 500;
         font-size: 24px;
@@ -50,14 +50,22 @@
         text-align: left;
     }
 
+    @media (min-width: 769px) {
+        height: 167px;
+
+        h2 {
+            left: 0; //on réinitialise à 0 pour permettre de centrer
+            font-size: 36px;
+            text-align: center; //on centre le texte 
+            width: 100%;
+        }
+    }
+
     @media (min-width: 1025px) {
         height: 223px;
 
         h2 {
-            left: 0; //on réinitialise à 0 pour permettre de centrer
             font-size: 48px;
-            text-align: center; //on centre le texte 
-            width: 100%;
         }
     }
 }
