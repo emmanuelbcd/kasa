@@ -27,18 +27,16 @@
         border: none;
         cursor: pointer;
         z-index: 10; //on s'assure qu'il apparaît au-dessus de l'image
-        width: 24px;
 
-        .img {
-            opacity: 0.87;
-            //width: 24px;
+        img {
+            width: 24px;
+            height: auto;
         }
     }
 
     .slide-counter {
         position: absolute;
         color: variables.$color-secondary;
-        //text-align: center;
         left: 50%; // on centre horizontalement
         bottom: 14px;
         font-size: 14px;
@@ -52,9 +50,61 @@
         right: 2px; //2px du bord droit
     }
 
+    @media (min-width: 769px) {
+
+        height: 335px;
+
+        .slide-image {
+            border-radius: 17.5px;
+        }
+
+        .slide-button {
+
+            img {
+                width: 36px;
+                height: auto;
+            }
+        }
+
+        .slide-counter {
+            font-size: 16px;
+        }
+        
+        .prev {
+            left: 12.68px;
+        }
+
+        .next {
+            right: 12.68px;
+        }
+    }
+
     @media (min-width: 1025px) {
-        .slide-button-img {
-           width: 48.66px;
+
+        height: 415px;
+
+        .slide-image {
+            border-radius: 25px;
+        }
+
+        .slide-button {
+
+            img {
+                width: 48px;
+                height: auto;
+            }
+        }
+
+        .slide-counter {
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 23.36px; //2px du bord gauche
+        }
+    
+        .next {
+            right: 23.36px; //2px du bord droit
         }
     }
 
