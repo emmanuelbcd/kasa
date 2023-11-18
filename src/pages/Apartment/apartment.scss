@@ -1,10 +1,17 @@
 @use "../../styles/abstracts/variables" as variables;
 
 .apartment {
-    width: 90%;
+    width: 100%;
     margin : 0 auto; //on centre horizontalement
+    margin-right: auto;
+    margin-left: auto;
 
     .content {
+
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+
         h1 {
             font-size: 18px;
             color: variables.$color-primary;
@@ -78,16 +85,25 @@
                 }
             }
         }
+
+        .collapse_description {
+            width: 100%;
+        }
+
+        .collapse_equipment {
+            width: 100%;
+        }
+
     }
 
     //style pour les tablettes
-    @media (min-width: 769px) {
-        width: 92%;
-    }
+    //@media (min-width: 769px) {
+        //width: 92%;
+    //}
 
     //style pour les PC 
-    @media (min-width: 1025px) {
-        width: 85%;
-        max-width: 1440px;
-    }
+    //@media (min-width: 1025px) {
+        //width: 85%;
+        //max-width: 1440px;
+    //}
 }
