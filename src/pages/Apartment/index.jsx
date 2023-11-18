@@ -65,8 +65,8 @@ function Apartment({ match }) {
                     </div>
                 </div>
                 {/* Ici, on intègre le composant collapse*/}
-                <Collapse title="Description" content={apartment.description} />
-                <Collapse title="Équipement" content={apartment.equipments.map(equipment => <div key={equipment}>{equipment}</div>)} />
+                <Collapse title="Description" content={apartment.description} customClass="collapse_description"/>
+                <Collapse title="Équipement" content={apartment.equipments.map(equipment => <div key={equipment}>{equipment}</div>)} customClass="collapse_equipment"/>
             </main>
             <Footer />
         </div>
