@@ -1,15 +1,12 @@
-.about {
+.about .about_collapse {
     width: 90%;
-    margin : 0 auto; //on centre horizontalement
 
-    //style pour les tablettes
     @media (min-width: 769px) {
-        width: 92%;
+        width: 80%;
     }
 
-    //style pour les PC 
     @media (min-width: 1025px) {
-        width: 85%;
-        max-width: 1440px;
+        width: 70%;
     }
 }
+
