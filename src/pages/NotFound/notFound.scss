@@ -3,7 +3,7 @@
 
 //mobile first
 .not-found-page {
-    width: 90%;
+    //width: 90%;
     margin : 0 auto; //on centre horizontalement
     display: flex;
     flex-direction: column;
@@ -14,7 +14,8 @@
         align-items: center;
         justify-content: center;
         flex-grow: 1; //on permet à la section d'erreur de prendre tout l'espace restant, après le Header
-        padding: 262px 0; //on éloigne le 404 du haut
+        //padding: 262px 0; //on éloigne le 404 du haut
+        padding-top: calc(262px - 60px);
 
         .error-code {
             font-size: 96px;
@@ -39,16 +40,36 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
+         //style pour les PC 
+        @media (min-width: 1025px) {
+
+            //padding: 277px 0; //on éloigne le 404 du haut
+            padding-top: calc(277px - 70px);
+
+            .error-code {
+                font-size: 288px;
+            }
+            
+            .error-message {
+                width: 100%;
+                font-size: 36px;
+            }
+
+            .return-home {
+                font-size: 18px;
+            }
+    }
+
     }
 
     //style pour les tablettes
-    @media (min-width: 769px) {
-        width: 92%;
-    }
+    //@media (min-width: 769px) {
+        //width: 92%;
+    //}
 
     //style pour les PC 
     @media (min-width: 1025px) {
-        width: 85%;
         max-width: 1440px;
     }
 }
