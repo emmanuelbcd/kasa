@@ -13,7 +13,7 @@ function About() {
             <Header />
             <Banner image={aboutBanner} />
             {aboutData.map(data => (
-                <Collapse title={data.title} content={data.content} key={data.title} />
+                <Collapse title={data.title} content={data.content} key={data.title} customClass="about_collapse" />
             ))}
             <Footer />
         </div>
