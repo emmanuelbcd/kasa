@@ -36,6 +36,7 @@
         .return-home {
             font-size: 14px;
             padding-top: 200px; //on éloigne le return home du haut
+            padding-bottom: 200px;
             color: variables.$color-primary;
             text-decoration: underline;
             cursor: pointer;
