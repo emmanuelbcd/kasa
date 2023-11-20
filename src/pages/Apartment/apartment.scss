@@ -12,36 +12,39 @@
         margin-right: auto;
         margin-left: auto;
 
-        h1 {
-            font-size: 18px;
-            color: variables.$color-primary;
-        }
+        .content_header {
 
-        .content_location {
-            font-size: 14px;
-            color: variables.$color-primary;
-        }
-
-        .content_tags {
-            margin-bottom: 14px;
-
-            span {
-            display: inline-block;
-            min-width: 84px;
-            background-color: variables.$color-primary;
-            color: variables.$color-secondary;
-            padding: 5px 10px;
-            margin-right: 10px;
-            margin-top: 14px;
-            font-size: 10px;
-            text-align: center;
-            border-radius: 5px;
-
-                &:last-child {
-                    margin-right: 0; //on s'assure que le dernier tag n'a pas d'espace à droite
-                }
+            h1 {
+                font-size: 18px;
+                color: variables.$color-primary;
             }
-
+    
+            .content_location {
+                font-size: 14px;
+                color: variables.$color-primary;
+            }
+    
+            .content_tags {
+                margin-bottom: 14px;
+    
+                span {
+                display: inline-block;
+                min-width: 84px;
+                background-color: variables.$color-primary;
+                color: variables.$color-secondary;
+                padding: 5px 10px;
+                margin-right: 10px;
+                margin-top: 14px;
+                font-size: 10px;
+                text-align: center;
+                border-radius: 5px;
+    
+                    &:last-child {
+                        margin-right: 0; //on s'assure que le dernier tag n'a pas d'espace à droite
+                    }
+                }
+    
+            }
         }
 
         .rate_host_container {
@@ -97,13 +100,125 @@
     }
 
     //style pour les tablettes
-    //@media (min-width: 769px) {
-        //width: 92%;
-    //}
+    @media (min-width: 769px) {
+        .content {
+            .content_top {
+                .content_header {
+                    h1 {
+                        font-size: 27px;
+                    }
+                    .content_location {
+                        font-size: 16px;
+                    }
+                    .content_tags {
+                        span {
+                            font-size: 12px;
+                            min-width: 99.5px;
+                        }
+                    }
+                }
+                .rate_host_container {
+                    .content_rate {
+                        img {
+                            margin-right: 9.5px;
+                            height: 18.5px;
+                        }
+                    }
+                    .content_host {
+                        .content_hostName {
+                            font-size: 15px;
+                            line-height: 21.39px;
+                        }
+                        .content_hostPicture{
+                            img {
+                                width: 48px;
+                                height: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     //style pour les PC 
-    //@media (min-width: 1025px) {
-        //width: 85%;
-        //max-width: 1440px;
-    //}
+    @media (min-width: 1025px) {
+        max-width: 1440px;
+        .content {
+            margin-top: 18px;
+
+            .content_top {
+                display: flex;
+                justify-content: space-between;
+                
+
+                .content_header {
+                    //flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h1 {
+                        font-size: 36px;
+                        margin-top: 0px;
+                        margin-bottom: 14px;
+                    }
+
+                    .content_location {
+                        font-size: 18px;
+                    }
+                    .content_tags {
+                        margin-bottom: 0px;
+
+                        span {
+                            font-size: 14px;
+                            min-width: 115px;
+                        }
+                    }
+                    
+                }
+    
+                .rate_host_container {
+                    //flex: 1;
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .content_rate {
+                        
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        
+                        img {
+                            margin-right: 14px;
+                            height: 24px;
+                        }
+                    }
+
+                    .content_host {
+
+                        .content_hostName {
+                            font-size: 18px;
+                            line-height: 25.67px;
+                        }
+
+                        .content_hostPicture {
+                            img {
+                                width: 64px;
+                                height: 64px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .collapse_component {
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                margin-top: 14px;
+            }
+        }
+    }
 }
