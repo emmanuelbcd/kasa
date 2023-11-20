@@ -45,28 +45,32 @@ function Apartment({ match }) {
             <Header />
             <Slideshow pictures={apartment.pictures} /> {/* Utilisation du composant Slideshow */}
             <main className="content">
-                <h1>{ apartment.title }</h1>
-                
-                
-                <div className="content_location">{ apartment.location }</div>
-                <div className="content_tags">
-                    { apartment.tags.map(tag => <span key={tag}>{tag}</span>)}
-                    {/*apartment.tags*/}
-                </div>
-                <div className="rate_host_container">
-                    <div className="content_rate">
-                        {generateStars(apartment.rating)}
+                <div className="content_top">
+                    <div className="content_header">
+                        <h1>{ apartment.title }</h1>
+                        <div className="content_location">{ apartment.location }</div>
+                        <div className="content_tags">
+                            { apartment.tags.map(tag => <span key={tag}>{tag}</span>)}
+                            {/*apartment.tags*/}
+                        </div>
                     </div>
-                    <div className="content_host">
-                        <div className="content_hostName">{apartment.host.name}</div>
-                        <div className="content_hostPicture">
-                            <img src={apartment.host.picture} alt={`Hôte ${apartment.host.name}`} />
-                        </div>       
+                    <div className="rate_host_container">
+                        <div className="content_rate">
+                            {generateStars(apartment.rating)}
+                        </div>
+                        <div className="content_host">
+                            <div className="content_hostName">{apartment.host.name}</div>
+                            <div className="content_hostPicture">
+                                <img src={apartment.host.picture} alt={`Hôte ${apartment.host.name}`} />
+                            </div>       
+                        </div>
                     </div>
                 </div>
                 {/* Ici, on intègre le composant collapse*/}
-                <Collapse title="Description" content={apartment.description} customClass="collapse_description"/>
-                <Collapse title="Équipement" content={apartment.equipments.map(equipment => <div key={equipment}>{equipment}</div>)} customClass="collapse_equipment"/>
+                <div className="collapse_component">
+                    <Collapse title="Description" content={apartment.description} customClass="collapse_description"/>
+                    <Collapse title="Équipement" content={apartment.equipments.map(equipment => <div key={equipment}>{equipment}</div>)} customClass="collapse_equipment"/>
+                </div>
             </main>
             <Footer />
         </div>
